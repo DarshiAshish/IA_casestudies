@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Word Cloud</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        img {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            max-width: 80%;
+        }
+        div{
+            height: 20px;
+            width: 50px;
+            color: black;
+            border: 10px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Live Word Cloud</h2>
+    <textarea id="textInput" placeholder="Type your text here..."></textarea>
+    <br>
+    <img id="wordCloudImage" src="" alt="Word Cloud will appear here">
+    <img id="barImage" src="" alt="Bar Image will appear here">
+    <div id="sentiment">hello</div>
+
+
+    <script>
+        const socket = io.connect("http://localhost:5000");
+
+        document.getElementById("textInput").addEventListener("input", function() {
+            const text = this.value;
+            socket.emit("text_update", { text: text });
+        });
+
+        socket.on("wordcloud_update", function(data) {
+            document.getElementById("wordCloudImage").src = data.image;
+            document.getElementById("barImage").src = data.image1;
+            console.log(data.sentiment);
+            document.getElementById("sentiment").innerHTML = data.sentiment;
+
+        });
+    </script>
+</body>
+</html>
