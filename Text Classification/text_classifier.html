@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intent Classification Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .example-inputs {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .response {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .class-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .class-list li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Text Classification</h1>
+<p>Text classification is a Natural Language Processing (NLP) technique used to categorize text data into predefined labels based on its content. This is useful for organizing and sorting large volumes of text data.</p>
+
+<h2>How to Do It:</h2>
+<ol>
+    <li><strong>Define Categories:</strong> Determine the categories you want to classify text into.</li>
+    <li><strong>Train a Model:</strong> Use machine learning algorithms to train a model on labeled data.</li>
+    <li><strong>Classify Text:</strong> Apply the trained model to new text data to classify it into the predefined categories.</li>
+</ol>
+
+<p>Ex: Classifying customer feedback into categories like product complaints, service praise, and feature requests. A customer support classifier uses intent classification to automate responses by interpreting user messages and mapping them to predefined replies.</p>
+<h2>Text Classification</h2>
+
+<h2>List of Inputs here we can categorize</h2>
+<ul class="class-list">
+    <li>cancel_order – Recognizing when a customer wants to cancel an order.</li>
+    <li>change_order – Identifying when a customer wants to modify an existing order.</li>
+    <li>change_shipping_address – Detecting when a user wants to update their delivery address.</li>
+    <li>check_cancellation_fee – Informing customers about potential cancellation fees.</li>
+    <li>check_invoice – Assisting customers in retrieving their invoice.</li>
+    <li>check_payment_methods – Providing details on available payment methods.</li>
+    <li>check_refund_policy – Helping customers understand the refund policy.</li>
+    <li>complaint – Handling customer complaints and concerns.</li>
+    <li>contact_customer_service – Connecting users with customer service for assistance.</li>
+    <li>contact_human_agent – Allowing customers to request support from a human agent.</li>
+    <li>create_account – Guiding users through the account creation process.</li>
+    <li>delete_account – Assisting customers in deleting their accounts.</li>
+    <li>delivery_options – Providing information on available delivery methods.</li>
+    <li>delivery_period – Informing customers about estimated delivery timeframes.</li>
+    <li>edit_account – Helping users modify their account details.</li>
+    <li>get_invoice – Assisting users in retrieving an invoice.</li>
+    <li>get_refund – Helping customers initiate a refund request.</li>
+    <li>newsletter_subscription – Managing newsletter sign-ups and subscriptions.</li>
+    <li>payment_issue – Addressing issues related to payments and transactions.</li>
+    <li>place_order – Assisting users with placing an order.</li>
+    <li>recover_password – Helping customers recover or reset their passwords.</li>
+    <li>registration_problems – Assisting users with registration issues.</li>
+    <li>review – Handling customer reviews and feedback submissions.</li>
+    <li>set_up_shipping_address – Assisting in adding or updating a shipping address.</li>
+    <li>switch_account – Helping users switch between different accounts.</li>
+    <li>track_order – Providing order tracking details.</li>
+    <li>track_refund – Allowing users to track the status of their refund.</li>
+</ul>
+<p> See, the below intent meanings and possible inputs with it's output.</p>
+<h3>1. Cancel Order (cancel_order)</h3>
+<p><strong>Purpose:</strong> Recognize when a customer wants to cancel an order.</p>
+<div class="example-inputs">
+    <p><strong>Example Inputs:</strong></p>
+    <p>"I need to cancel my order immediately."</p>
+    <p>"Can you help me with canceling my recent purchase?"</p>
+</div>
+<div class="response">
+    <p><strong>Response:</strong> "Sure, I can assist you with canceling your order. Please let me know the order details or reference number for smoother processing."</p>
+</div>
+
+<h3>2. Change Order (change_order)</h3>
+<p><strong>Purpose:</strong> Identify when a customer wants to modify an existing order.</p>
+<div class="example-inputs">
+    <p><strong>Example Inputs:</strong></p>
+    <p>"I ordered the wrong product. Can I change it?"</p>
+    <p>"How do I update my order details?"</p>
+</div>
+<div class="response">
+    <p><strong>Response:</strong> "Absolutely, I can help you adjust your order. Could you please specify which items you'd like to add or remove?"</p>
+</div>
+
+<h3>3. Change Shipping Address (change_shipping_address)</h3>
+<p><strong>Purpose:</strong> Detect when a user wants to update their delivery address.</p>
+<div class="example-inputs">
+    <p><strong>Example Inputs:</strong></p>
+    <p>"I need to update my shipping address before my order is dispatched."</p>
+    <p>"Can I change the delivery location for my package?"</p>
+</div>
+<div class="response">
+    <p><strong>Response:</strong> "I can certainly guide you through changing your shipping address. Could you please provide me with your current and desired shipping addresses for accuracy?"</p>
+</div>
+
+<h3>4. Check Cancellation Fee (check_cancellation_fee)</h3>
+<p><strong>Purpose:</strong> Inform customers about potential cancellation fees.</p>
+<div class="example-inputs">
+    <p><strong>Example Inputs:</strong></p>
+    <p>"Will I be charged if I cancel my order?"</p>
+    <p>"What’s the cancellation policy for my purchase?"</p>
+</div>
+<div class="response">
+    <p><strong>Response:</strong> "I can definitely assist you with understanding the cancellation fees. Could you please provide me with the details of your transaction or service for accurate guidance?"</p>
+</div>
+
+<h3>5. Check Invoice (check_invoice)</h3>
+<p><strong>Purpose:</strong> Assist customers in retrieving their invoice.</p>
+<div class="example-inputs">
+    <p><strong>Example Inputs:</strong></p>
+    <p>"How can I download my invoice?"</p>
+    <p>"Can you send me a copy of my purchase receipt?"</p>
+</div>
+<div class="response">
+    <p><strong>Response:</strong> "I can certainly assist you with locating your invoice. Could you please provide me with the details of your purchase, such as the date or order number, for accurate guidance?"</p>
+</div>
+
+<h3>6. Get Refund (get_refund)</h3>
+<p><strong>Purpose:</strong> Help customers initiate a refund request.</p>
+<div class="example-inputs">
+    <p><strong>Example Inputs:</strong></p>
+    <p>"I need a refund for my order."</p>
+    <p>"How do I get my money back?"</p>
+</div>
+<div class="response">
+    <p><strong>Response:</strong> "The refund policy is clearly mentioned in our company portal. Please have a look at our home page."</p>
+</div>
+
+</body>
+</html>
