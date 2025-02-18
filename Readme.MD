@@ -1,46 +1,34 @@
-\documentclass{article}
-\usepackage{listings}
+# Case Studies
 
-\title{Case Studies}
-\date{}
+All four projects use a single environment. To install the necessary dependencies, run:  
 
-\begin{document}
-
-\maketitle
-
-This document outlines the four projects included in this repository, all of which use a unified environment.  
-To install the necessary dependencies, execute the following command:
-
-\begin{lstlisting}
+```bash
 pip install -r requirements.txt
-\end{lstlisting}
+```
 
-\section*{Running the Servers}
+## Running the Servers  
 
-Each project can be executed using the following commands:
+- **SMS Spam Classifier**  
+  Run the server using:  
+  ```bash
+  python spam_words.py
+  ```
 
-\begin{itemize}
-    \item \textbf{SMS Spam Classifier}
-    \begin{lstlisting}
-    python spam_words.py
-    \end{lstlisting}
+- **Summarization**  
+  Run the server using:  
+  ```bash
+  python summary.py
+  ```
 
-    \item \textbf{Text Summarization}
-    \begin{lstlisting}
-    python summary.py
-    \end{lstlisting}
+- **Text Classification**  
+  Run the server using:  
+  ```bash
+  python test_model.py
+  ```
 
-    \item \textbf{Text Classification}
-    \begin{lstlisting}
-    python test_model.py
-    \end{lstlisting}
+- **Sentiment Analysis**  
+  Run the server using:  
+  ```bash
+  python sentiment.py
+  ```
 
-    \item \textbf{Sentiment Analysis}
-    \begin{lstlisting}
-    python sentiment.py
-    \end{lstlisting}
-\end{itemize}
-
-Ensure that all required packages are installed before running the scripts.
-
-\end{document}
