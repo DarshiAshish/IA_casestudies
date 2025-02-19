@@ -6,7 +6,10 @@ from sentence_transformers import SentenceTransformer
 import tensorflow as tf
 from tensorflow.keras.models import load_model 
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 # Load EMBER V1 model
 def ember_v1_model():
